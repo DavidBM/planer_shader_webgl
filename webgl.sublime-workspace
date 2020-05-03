@@ -1,0 +1,1996 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"norm",
+				"normalTexture"
+			],
+			[
+				"bel",
+				"blendingEnd"
+			],
+			[
+				"sum",
+				"sum_colors_with_alpha"
+			],
+			[
+				"messa",
+				"messagesCallbacks"
+			],
+			[
+				"abso",
+				"absolute"
+			],
+			[
+				"ajax",
+				"ajax2\tjQuery AJAX call"
+			],
+			[
+				"for",
+				"for\tfor (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"pro",
+				"proto\tPrototype"
+			],
+			[
+				"prot",
+				"proto\tPrototype"
+			],
+			[
+				"bu",
+				"building"
+			],
+			[
+				"icon",
+				"iconWidth"
+			],
+			[
+				"line-h",
+				"line-height: 〔property〕"
+			],
+			[
+				"unblock",
+				"unblockSpace"
+			],
+			[
+				"fun",
+				"fun\tFunction"
+			],
+			[
+				"hist",
+				"historical〔argument〕"
+			],
+			[
+				"UserPl",
+				"UserPlanet〔class〕"
+			],
+			[
+				"ext",
+				"extend\t@extend"
+			],
+			[
+				"produc",
+				"productionText〔variable〕"
+			],
+			[
+				"fu",
+				"fun\tFunction"
+			],
+			[
+				"notifi",
+				"notification〔argument〕"
+			],
+			[
+				"Servi",
+				"ServicesDirectory〔function〕"
+			],
+			[
+				"terra",
+				"terrainType"
+			],
+			[
+				"generate",
+				"generateProceduralMap"
+			],
+			[
+				"tex",
+				"textures"
+			],
+			[
+				"dis",
+				"distributionChart"
+			],
+			[
+				"colum",
+				"column2-6"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"he",
+				"height:   (property)"
+			],
+			[
+				"wid",
+				"width:   (property)"
+			],
+			[
+				"level",
+				"levelUpCosts"
+			],
+			[
+				"T",
+				"TrueDom"
+			],
+			[
+				"Plan",
+				"PlanetMap"
+			],
+			[
+				"slow",
+				"onSlowRequest"
+			],
+			[
+				"consol",
+				"console\tconsole.warn()"
+			],
+			[
+				"request",
+				"requests"
+			],
+			[
+				"Ser",
+				"ServicesDirectory"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"back",
+				"background-color:   (property)"
+			],
+			[
+				"get",
+				"getButtonsData  (function)"
+			],
+			[
+				"abs",
+				"absolute"
+			],
+			[
+				"True",
+				"TrueDomTemplate"
+			],
+			[
+				"ad",
+				"append"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"caa",
+				"callback"
+			],
+			[
+				"new",
+				"newData"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"scr",
+				"script\tTag"
+			],
+			[
+				"html",
+				"html\thtml"
+			],
+			[
+				"rep",
+				"repeat-x"
+			],
+			[
+				"aja",
+				"ajax0\tjQuery AJAX call"
+			],
+			[
+				"marke",
+				"marketingData"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"add",
+				"appendChild"
+			],
+			[
+				"w",
+				"widows"
+			],
+			[
+				"posi",
+				"position"
+			],
+			[
+				"posit",
+				"positionB"
+			],
+			[
+				"ne",
+				"neighbor"
+			],
+			[
+				"bui",
+				"buildings"
+			],
+			[
+				"bin",
+				"binding"
+			],
+			[
+				"pla",
+				"PlanetMap"
+			],
+			[
+				"sib",
+				"subscribeServicesGetters  (function)"
+			],
+			[
+				"on",
+				"onError"
+			],
+			[
+				"app",
+				"apply"
+			],
+			[
+				"temp",
+				"templateInstance"
+			],
+			[
+				"ap",
+				"apply"
+			],
+			[
+				"adja",
+				"adjacentBuilding"
+			],
+			[
+				"rule",
+				"ruleModifierComplex"
+			],
+			[
+				"crea",
+				"createSocket  (function)"
+			],
+			[
+				"Planet",
+				"planetYards"
+			],
+			[
+				"poit",
+				"points"
+			],
+			[
+				"galaxy",
+				"galaxyJson"
+			],
+			[
+				"inner",
+				"innerWidth"
+			],
+			[
+				"len",
+				"lateralLength"
+			],
+			[
+				"scri",
+				"script\tTag"
+			],
+			[
+				"scrip",
+				"script external\tscript-external"
+			],
+			[
+				"fp",
+				"fpixelsData"
+			],
+			[
+				"Sync",
+				"_sendSync"
+			],
+			[
+				"_rp",
+				"_rpcs"
+			],
+			[
+				"create",
+				"createRPC  (function)"
+			],
+			[
+				"fi",
+				"flex-direction"
+			],
+			[
+				"chan",
+				"channel"
+			],
+			[
+				"connec",
+				"connect"
+			],
+			[
+				"ex",
+				"export"
+			],
+			[
+				"data",
+				"dataType"
+			],
+			[
+				"ret",
+				"retry"
+			],
+			[
+				"htm",
+				"html bootstrap\thtml5-bootstrap"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"change",
+				"changelogContainer"
+			],
+			[
+				"serverD",
+				"serverDebug"
+			],
+			[
+				"so",
+				"socket"
+			],
+			[
+				"key",
+				"keyup  (function)"
+			],
+			[
+				"upta",
+				"updateValues"
+			],
+			[
+				"createE",
+				"createTextNode"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"glo",
+				"global"
+			],
+			[
+				"setTime",
+				"setTimeout  (function)"
+			],
+			[
+				"cre",
+				"credits"
+			],
+			[
+				"planet",
+				"planetId"
+			],
+			[
+				"col",
+				"column-2-1"
+			],
+			[
+				"aux",
+				"auxShips  (variable)"
+			],
+			[
+				"func_get_",
+				"func_get_args"
+			],
+			[
+				"tutorials",
+				"tutorials"
+			],
+			[
+				"show",
+				"showTutorialWindow"
+			],
+			[
+				"register",
+				"registerChannelEvent  (function)"
+			],
+			[
+				"d",
+				"div"
+			],
+			[
+				"Pl",
+				"PLANET"
+			],
+			[
+				"interf",
+				"interface"
+			],
+			[
+				"console",
+				"console\tconsole.log()"
+			],
+			[
+				"ar",
+				"args"
+			],
+			[
+				"enum",
+				"enumPermissions"
+			],
+			[
+				"enu",
+				"enumPermissions"
+			],
+			[
+				"set",
+				"setText"
+			],
+			[
+				"upgradeBar",
+				"upgradeBar"
+			],
+			[
+				"gr",
+				"graphCache"
+			],
+			[
+				"createPa",
+				"createPathWithRoute"
+			],
+			[
+				"default",
+				"default  (keyword)"
+			],
+			[
+				"flee",
+				"fleetsByPlanet"
+			],
+			[
+				"star",
+				"stargateId"
+			],
+			[
+				"fle",
+				"fleetsByCumulus"
+			],
+			[
+				"fleetB",
+				"fleetsById"
+			],
+			[
+				"route",
+				"routeData"
+			],
+			[
+				"args",
+				"args"
+			],
+			[
+				"_des",
+				"_desplacedX"
+			],
+			[
+				"__vent",
+				"__eventAbstractCallCallbacksSync"
+			],
+			[
+				"dibu",
+				"dibujará"
+			],
+			[
+				"is",
+				"_isHide  (variable)"
+			],
+			[
+				"can",
+				"_canvasTrasnform  (variable)"
+			],
+			[
+				"cle",
+				"_clearData"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 956,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shader.frag.js",
+			"settings":
+			{
+				"buffer_size": 10847,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prueba 1_files/webgl.js",
+			"settings":
+			{
+				"buffer_size": 4998,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prueba 1_files/normalmapfilter.js",
+			"settings":
+			{
+				"buffer_size": 2542,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\nvoid mainImage( out vec4 fragColor, in vec2 fragCoord ) {\n    vec2 p = (2. * fragCoord.xy - iResolution.xy) / iResolution.y;\n    float lat = 15. * sin(0.1 * iTime);\n    float lon = -5. * iTime;\n    if (iMouse.z > 0.) {\n        lat = 90.  - 180. * iMouse.y/iResolution.y;\n        lon = 180. - 360. * iMouse.x/iResolution.x;\n    }\n    vec3 camPos = 10. * fromlatlon(lat, lon);\n    vec3 w = normalize(-camPos);\n    vec3 u = normalize(cross(w, vec3(0,1,0)));\n    vec3 v = normalize(cross(u, w));\n    mat3 camera = mat3(u, v, w);\n    \n    vec3 sun = fromlatlon(23.5 * sin(2.*PI * iTime/60.), -360. * iTime/15.);\n    vec3 dir = normalize(camera * vec3(p / SCALE, length(camPos)));\n\t\t\t  \n\tvec2 e = ray_vs_sphere(camPos, dir, R_INNER + ATMOSPHERE_THICKNESS);\n\tif (e.x > e.y) return;\n\t\n\tvec2 f = ray_vs_sphere(camPos, dir, R_INNER);\n\te.y = min(e.y, f.x);\n    float dist = f.x;\n    \n    fragColor = vec4(0,0,0,1);\n    if (f.x < f.y) {\n        vec3 q = camPos + dir * dist;\n        vec3 c = map(q);\n        float height = c.x;\n        float density = c.y;\n        float cities = c.z;\n        float light = dot(normalize(q), sun);\n        float specular = pow(clamp(dot(normalize(sun - dir), q), 0., 1.), 64.);\n        vec3 day = vec3(0.06, 0.05, 0.2);\n        vec3 night = vec3(0.00, 0.00, 0.01);\n        if (height > 0.) {\n            day = mix(vec3(0.16, 0.23, 0.09), vec3(0.56, 0.49, 0.28), smoothstep(0., 0.5, height));\n            night = vec3(0.00, 0.00, 0.02);\n            night *= 1. + 1.5 * clamp(FBM(50. * q) - 0.15, 0., 1.);\n            night = mix(night, 0.75 * sqrt(density) * vec3(0.95, 0.76, 0.47),\n                        smoothstep(0., 1., cities) * dot(normalize(camPos), q));\n            night = clamp(night, 0., 1.);\n        } else {\n            day += 0.25 * specular * vec3(0.87, 0.75, 0.);\n        }\n        fragColor.rgb = mix(night, day * light, smoothstep(-0.1, 0.1, light));\n    }\n\n\tfragColor.rgb += in_scatter(camPos, dir, e, sun);\n    \n    fragColor.rgb = pow(fragColor.rgb, vec3(1./2.2));\n}",
+			"settings":
+			{
+				"buffer_size": 2010,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"align",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"alig",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"inser",
+				"Insert Nums"
+			],
+			[
+				"num",
+				"Insert Nums"
+			],
+			[
+				"ali",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ran",
+				"Generate Random Text"
+			],
+			[
+				"jaa",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pick",
+				"Color Picker"
+			],
+			[
+				"pic",
+				"Color Picker"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"lowee",
+				"Convert Case: Lower Case"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"algn",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"insert",
+				"Insert Nums"
+			],
+			[
+				"javascr",
+				"Javascript Beautify"
+			],
+			[
+				"beuaty",
+				"SassBeautify"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"oupp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"beauty",
+				"Javascript Beautify"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"remve",
+				"Emmet: Remove Tag"
+			],
+			[
+				"snippet f",
+				"Snippet: not.toBeUndefined"
+			],
+			[
+				"snippet: function",
+				"Snippet: setTimeout function"
+			],
+			[
+				"Snippet: function",
+				"Snippet: Anonymous Function"
+			],
+			[
+				"comma",
+				"FindKeyConflicts: Command Search"
+			],
+			[
+				"find comm",
+				"FindKeyConflicts: Command Search"
+			],
+			[
+				"find",
+				"FindKeyConflicts: All Key Maps to Buffer"
+			],
+			[
+				"findke",
+				"FindKeyConflicts: Overlap Conflicts"
+			],
+			[
+				"inte",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"beau",
+				"SassBeautify"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"javascri",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"tab",
+				"AlignTab"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"JavaScript",
+				"Javascript Beautify"
+			],
+			[
+				"case",
+				"Convert Case: Lower Case"
+			],
+			[
+				"scss",
+				"SCSS Expander: Expand Cursor Scope"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"random",
+				"Generate Random Text"
+			],
+			[
+				"c",
+				"Set Syntax: C"
+			],
+			[
+				"mar",
+				"Markmon launch"
+			],
+			[
+				"javasc",
+				"Javascript Beautify"
+			],
+			[
+				"jaava",
+				"Set Syntax: JavaScript (Rails)"
+			],
+			[
+				"up",
+				"Convert Case: Upper Case"
+			],
+			[
+				"",
+				"AlignTab"
+			],
+			[
+				"gitgu",
+				"GitGutter: Compare Against Branch"
+			],
+			[
+				"beaut",
+				"Javascript Beautify"
+			],
+			[
+				"line",
+				"Raw Line Edit: Toggle"
+			],
+			[
+				"lne",
+				"Raw Line Edit: Toggle"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"LOWE",
+				"Convert Case: Lower Case"
+			],
+			[
+				"dif",
+				"FileDiffs: Menu"
+			],
+			[
+				"jaas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"tabs",
+				"TabsToTable"
+			],
+			[
+				"ta",
+				"TabsToTable"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"remoce",
+				"Package Control: Remove Package"
+			],
+			[
+				"mini",
+				"Minify::User File Settings"
+			],
+			[
+				"rand",
+				"Generate Random Text"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"beay",
+				"Javascript Beautify"
+			],
+			[
+				"jso",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"remoe",
+				"Package Control: Remove Package"
+			],
+			[
+				"base",
+				"Base Encoding: Base64 Decode Selection(s)"
+			],
+			[
+				"jsv",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"comme",
+				"Toggle Comment"
+			],
+			[
+				"string",
+				"Stringify: Java"
+			],
+			[
+				"come",
+				"Snippet: comment"
+			],
+			[
+				"comment",
+				"Snippet: comment"
+			],
+			[
+				"bout",
+				"About"
+			],
+			[
+				"if",
+				"Snippet: if … else"
+			],
+			[
+				"can",
+				"Can I Switch To Sublime Text 3?"
+			],
+			[
+				"rgb",
+				"Convert HEX to RGB"
+			],
+			[
+				"beatu",
+				"SassBeautify: Convert from CSS to current type"
+			],
+			[
+				"set jac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"number",
+				"Emmet: Increment Number by 10"
+			],
+			[
+				"can ",
+				"Can I Switch To Sublime Text 3?"
+			],
+			[
+				"PLA",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"rando",
+				"Random:int"
+			],
+			[
+				"bloc",
+				"Toggle Block Comment"
+			],
+			[
+				"reide",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"blo",
+				"Toggle Block Comment"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"task",
+				"Set Syntax: Tasks"
+			],
+			[
+				"reove",
+				"Package Control: Remove Package"
+			],
+			[
+				"tasks",
+				"Set Syntax: Tasks"
+			],
+			[
+				"todo",
+				"Set Syntax: iTodo"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"bourb",
+				"Snippet: background-break:bounding-box"
+			],
+			[
+				"colorp",
+				"Color Picker: Insert Color"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"SassBeautify: Convert from SCSS to current type"
+			],
+			[
+				"ling",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"new",
+				"File: New View into File"
+			],
+			[
+				"codeinte",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"snippet",
+				"Snippet: mousemove"
+			],
+			[
+				"net",
+				"Snippet: slideToggle"
+			],
+			[
+				"server",
+				"SFTP: Browse Server…"
+			],
+			[
+				"remote",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"remo",
+				"SFTP: Browse Remote…"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 948.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"echo ${folder}",
+			"echo folder",
+			"echo",
+			"${folder}",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/david/repos/starriser/planeta",
+		"/home/david/repos/starriser/planeta/earth"
+	],
+	"file_history":
+	[
+		"/home/david/repos/starriser/planeta/3djvkm37.png",
+		"/home/david/repos/starriser/planeta/prueba 1_files/normalmapfilter.js",
+		"/home/david/repos/starriser/planeta/textura3.png",
+		"/home/david/repos/starriser/planeta/index.html",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/css.css",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/funciones.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/index.html",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/interfaz.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/recursos.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/ventanas.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/univers_sector.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/universo.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/traducion.php",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/sftp-config.json",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/jquerypp.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/jquery.mousewheel.min.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/jquery.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/jquery.dataTables.min.js",
+		"/D/Trabajo/Clasificado/Proyectos/UniverseX/interfaces/Interfaz4/crear_menus.js",
+		"/D/Trabajo/Clasificado/WebGL/planeta nube/index.html",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/net/fakeServerSocket.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/views/planetMap/position.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/views/planetMap/grid.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/userPlanet.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/userPlanet.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/userPlanetCommandCenter.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/bus.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/views/planetMap.js",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/game.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/net/netDirectory.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/net/serverAjax.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/helpers/RPC.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/rules.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/net/serverSocket.js",
+		"/D/Trabajo/Clasificado/pruebas/TDD-cueva/js/src/GraphicEngine.js",
+		"/D/Trabajo/Clasificado/pruebas/TDD-cueva/js/src/app.js",
+		"/D/Trabajo/Clasificado/pruebas/TDD-cueva/js/src/Song.js",
+		"/D/Trabajo/Clasificado/pruebas/TDD-cueva/js/src/Point.js",
+		"/D/Trabajo/Clasificado/pruebas/TDD-cueva/js/src/Player.js",
+		"/D/Trabajo/Clasificado/pruebas/TDD-cueva/js/src/parser.js",
+		"/D/Trabajo/Clasificado/pruebas/TDD-cueva/js/src/Line.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/menus/userPlanetBuildingCommandCenter.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/userPlanet.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/buildings/commandCenter.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/userPlanetWarehouse.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/userPlanetMine.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/buildings/mineN.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/userPlanetLab.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/ownUser.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/menus/userPlanetBuildingMine.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/buildings/lab.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/menus/userPlanetBuildingWareHouse.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/menus/userPlanetBuildingFrame.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/userPlanetFrame.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/menus/userPlanet.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/buildings/mine.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/buildings/warehouse.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/engine/plugins/html.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/node_modules/hex-pixi-js/scripts/hexpixicell.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/node_modules/hex-pixi-js/scripts/hexpiximap.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/userPlanetNotifications.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/hud/hud.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/globalMenus/abstractButton.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/HUDGlobalPanelButton.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/HUDGlobalPanel.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/.jshintrc",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/gulpfile.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/rules/ruleModifier.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/global/defines.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/engine/plugins/htmlUtilities.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/global/global.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/main.scss",
+		"/D/Trabajo/Repositorios/StarriserTDD/js/templates/userPlanetWareHouse.js",
+		"/D/Trabajo/Repositorios/StarriserTDD/js/utils/crossPlatformEvent.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/init.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/net/serverSocketConnector.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/HUD.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/abstractService.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/notifications.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/HUDMainWindow.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/globalMenuContainer.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/UI.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/HUD.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/globalMenu.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/mainWindow.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/globalMenuEmpire.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/globalMenuLoading.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/globalMenuProfile.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/.jshintignore",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/servicesDirectory.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/utils/crossPlatformEvent.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/utils/graphicUtilities.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/globalMenus/abstractWindow.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/globalMenus/empire.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/menus/globalMenus/profile.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/helpers/multiService.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/utils/helpers.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/engine/engine.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/engine/plugins/events.js",
+		"/C/Users/David/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/David/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Trabajo/Repositorios/StarriserTDD/js/menus/userPlanet.js",
+		"/D/Trabajo/Repositorios/StarriserTDD/js/menus/buildings/wareHouse.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/templates/userPlanetWareHouse.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/scss/hud/mainWindow.scss",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/bundle/index.html",
+		"/Q/Photoshop CC/Crack/install.txt",
+		"/Q/Illustrator CC/Adobe Illustrator CC 17.0.0 Final Multilanguage [ChingLiu]/ChingLiu.Install.Notes.nfo",
+		"/C/Users/David/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/C/Users/David/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/StarriserTDD.sublime-project",
+		"/C/Users/David/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/views/planetMap/buildings.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/node_modules/hex-pixi-js/package.json",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/package.json",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/bundle/assets/css/main.css",
+		"/C/Users/David/Desktop/spve.html",
+		"/C/Users/David/AppData/Roaming/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/node_modules/hex-pixi-js/bin/hexpixi.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/node_modules/hexagon-grid/hexagon.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/node_modules/chart.js/Chart.js",
+		"/D/Trabajo/Repositorios/Chart.js/Chart.js",
+		"/D/Trabajo/Repositorios/Starriser/shared/frontend/js/services/rules/rulesDecoders.js",
+		"/D/Trabajo/Repositorios/StarriserTDD/js/services/rulesDecoders.js",
+		"/D/Trabajo/Repositorios/StarriserTDD/scss/menus/userPlanet.scss",
+		"/D/Trabajo/Repositorios/StarriserTDD/js/templates/userPlanet.js",
+		"/D/Trabajo/Repositorios/StarriserTDD/scss/global/global.scss"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 103.0,
+		"where_history":
+		[
+			"D:\\Trabajo\\Repositorios\\Starriser\\shared\\frontend\\js",
+			"D:\\Trabajo\\Repositorios\\Starriser\\shared\\frontend\\scss",
+			"D:\\Trabajo\\Repositorios\\Starriser\\shared\\frontend\\js",
+			"<open folders>/js",
+			"<open folders>",
+			"D:\\Trabajo\\Repositorios\\StarriserTDD\\js",
+			"D:\\Trabajo\\Repositorios\\StarriserTDD",
+			"D:\\Trabajo\\Repositorios\\StarriserTDD\\js",
+			"windows"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"atmosphere",
+			"createPlanet",
+			"atmosphere",
+			"normalTexture",
+			"atmosphere",
+			"normalTexture",
+			"earthnormal.png",
+			"vec4",
+			"atmosphere",
+			"sum_colors_with_alpha",
+			"calculate_phong_ligth_on_sphere",
+			"spherize_point",
+			"atmosphere",
+			"normalTexture",
+			"earthnormal",
+			"createPlanet",
+			"atmosphere",
+			"createPlanet",
+			"getPixelWidth",
+			"getAlphaBorderBlending",
+			"spherize_point",
+			"vec3( 3.8, 13.5, 33.1 )",
+			"phase_ray",
+			"20",
+			"SCATTER_INTENSITY",
+			"in_scatter",
+			"atmosphere",
+			"calculate_phong_ligth_on_sphere",
+			"atmosphere",
+			"calculate_phong_ligth_on_sphere",
+			"atmosphere",
+			"desplazamiento",
+			"despla",
+			"smoothstep",
+			"mix",
+			"atmosphere",
+			" * 2.0",
+			"atmosphere",
+			"5",
+			"atmosphere",
+			"getAlphaBorderBlending",
+			"pixelWidth",
+			"getAlphaBorderBlending",
+			"getPixelWidth",
+			"phase_mie",
+			"phase_ray",
+			"in_scatter",
+			"atmosphere",
+			"vTextureCoord.t",
+			"vTextureCoord.s",
+			"atmosphere",
+			"spherePoint",
+			"in",
+			"atmosphere",
+			"NUM_OUT_SCATTER",
+			"ATMOSPHERE_THICKNESS",
+			"E",
+			"HASHSCALE1",
+			"hash12",
+			"rexp",
+			"fromlatlon",
+			"ITERATIONS",
+			"HASHSCALE4",
+			"HASHSCALE3",
+			"HASHSCALE1",
+			"hash11",
+			"hash12",
+			"hash13",
+			"hash21",
+			"hash22",
+			"hash23",
+			"hash31",
+			"hash32",
+			"hash33",
+			"hash41",
+			"hash42",
+			"hash43",
+			"hash44",
+			"Noise",
+			"FBM",
+			"ray_dir",
+			"rot3xy",
+			"normal",
+			"boundLoadedFunction",
+			"spherizedCoord",
+			"calculate_phong_ligth_on_sphere",
+			"spherize_point",
+			"spherePoint",
+			"lightPositionZ",
+			"uniforms",
+			"float",
+			"vec3",
+			"dif",
+			"getAlphaBorderBlending",
+			"sum_colors_with_alpha",
+			"getAlphaBorderBlending",
+			"reglas_css_texto",
+			"css",
+			"angle",
+			"spherePoint",
+			"pongLigth",
+			"calculate_pong_ligth_on_sphere",
+			"h",
+			"pongLigth",
+			"calculate_pong_ligth_on_sphere",
+			"pongLigth",
+			"miColor",
+			"calculate_pong_ligth_on_sphere",
+			"filter",
+			"sprite",
+			"M_PI",
+			"ligthTex",
+			"difTex",
+			"cloudTex",
+			"miColor",
+			"atmosphere_apha_by_angle",
+			"sum_colors_with_alpha",
+			"1.4",
+			"ligth",
+			"difTexture",
+			"cloud",
+			"planet",
+			"dif",
+			"*",
+			"vec4",
+			"ligthDiffuse",
+			"redAtmosphere",
+			"ligthTotal"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"\\n",
+			"\\t",
+			"",
+			"\\n",
+			"",
+			"\\t",
+			"/t",
+			"UserPlanetsData",
+			"nnection",
+			"\\t",
+			".interface.",
+			"\\t",
+			"",
+			",",
+			"",
+			"function $1\\(clas, html, obj, name\\)\\{\\n\\treturn createElement\\(\"$1\", clas, html, obj, name\\);",
+			"function $1\\(clas, html, obj, name\\)\\{\\n\\treturn createElement\\($1, clas, html, obj, name\\);",
+			"\\n",
+			"\\t",
+			"",
+			"\\t",
+			"'/content/img/",
+			"\"/content/img/",
+			"\"t\"",
+			"\"type\":\"s\"",
+			"\"type\":\"p\"",
+			"w",
+			"n2",
+			"n1",
+			"idC",
+			"w",
+			"n1",
+			"n2",
+			"\"$1\":$2$3.$4",
+			"\"[xyw]\":$1$2.$3",
+			"\"y\":$1$2.$3",
+			"\"x\":$1$2.$3",
+			"\"y\":$1$2.$3",
+			"\"y\":$1.$2",
+			"\"x\":$1.$2",
+			"\"w\":$1.$2",
+			"\"w\":$1.$2$3",
+			"n2",
+			"w",
+			"n1",
+			"weight",
+			"self",
+			"this.isHide",
+			"nodeClick",
+			"$1",
+			"",
+			",",
+			"",
+			"eventsData",
+			"\",\"",
+			"",
+			"markedType",
+			"pathFindingMarkedLinks",
+			"this.drawData.jumpMarkedLinks",
+			"weight",
+			"\"",
+			": ,\\n",
+			"\", \"",
+			"",
+			"Tareas",
+			"\", \"",
+			", ",
+			"width:",
+			"seccion",
+			"success",
+			"i",
+			"estudiante",
+			"prepend",
+			"",
+			"\"",
+			"",
+			"_datos_seleccionado",
+			"self.movimiento_ejecucion",
+			"prevent_default:false",
+			"celeste",
+			"campo_html",
+			",",
+			"|",
+			"matriz_soles_cuadricula",
+			",\\n.",
+			", .",
+			"",
+			" .",
+			"",
+			"datos",
+			",",
+			"",
+			"}",
+			"",
+			"-197px",
+			"active",
+			" -99px ",
+			":hover{",
+			"/condiciones_generales/images/image",
+			"images/image",
+			"/images/image",
+			"interfaz",
+			"univers_sectores_select",
+			"|  |",
+			"",
+			"self.soles_mostrados",
+			"soles_mostrados",
+			"planetas_mostrados",
+			"this.y!=",
+			"this.x!=",
+			"NUM_SOLES_EJE",
+			"mostrar_soles",
+			"mostrar_planetas",
+			"mostrar_sol_sin_planetas",
+			"mostrar_soles_sin_planetas",
+			"radio_intervalo",
+			"col-entrar",
+			"boton_menu_select",
+			"</p><p>",
+			"h3",
+			"=\"++\"&",
+			"</p>\\n\\n<p>",
+			"</h3>\\n\\n<p>",
+			"</p>\\n\\n\\n<h3>",
+			"</p>\\n\\n\\n<p>",
+			".\\n\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"SL.13.region_keys":
+							[
+							],
+							"SL.24.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "shader.frag.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4859,
+								4859
+							]
+						],
+						"settings":
+						{
+							"SL.14.region_keys":
+							[
+							],
+							"SL.25.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": false,
+							"open_with_edit": true,
+							"syntax": "Packages/OpenGL Shading Language (GLSL)/GLSL.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 2888.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "prueba 1_files/webgl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4998,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2316,
+								2316
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"SL.15.region_keys":
+							[
+							],
+							"SL.16.region_keys":
+							[
+							],
+							"SL.18.region_keys":
+							[
+							],
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"encoding_thread_running": true,
+							"git_gutter_is_enabled": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 961.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "prueba 1_files/normalmapfilter.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								632,
+								632
+							]
+						],
+						"settings":
+						{
+							"SL.22.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.19.region_keys":
+							[
+							],
+							"default_dir": "/home/david/repos/starriser/planeta",
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/OpenGL Shading Language (GLSL)/GLSL.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								874,
+								874
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"default_dir": "/home/david/repos/starriser/planeta",
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/OpenGL Shading Language (GLSL)/GLSL.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 132.0
+	},
+	"output.clang":
+	{
+		"height": 94.0
+	},
+	"output.csslint_result_view":
+	{
+		"height": 94.0
+	},
+	"output.diagnostics":
+	{
+		"height": 490.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 157.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.gjslint_result_view":
+	{
+		"height": 94.0
+	},
+	"output.sftp":
+	{
+		"height": 66.0
+	},
+	"pinned_build_system": "",
+	"project": "webgl.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"int",
+				"Interfaz 4/index.html"
+			],
+			[
+				"funciones",
+				"/D/Nuevo USB/SVN/naves/trunk/Diseño/interfaz/Interfaz 4/funciones.js"
+			],
+			[
+				"fun",
+				"/D/Nuevo USB/SVN/naves/trunk/Diseño/interfaz/Interfaz 4/funciones.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/D/Nuevo USB/Trabajo/Proyectos/p_tareas.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

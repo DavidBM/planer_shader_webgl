@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- saved from url = (0040)http://www.yovid.es/pixi-test/esferizar/ -->
+<html><head><meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8">
+<title>prueba 1</title>
+<script type = "text/javascript" src = "prueba%201_files/MultipleCallbacks.js"></script>
+<script type = "text/javascript" src = "prueba%201_files/pixi.js"></script>
+<script type = "text/javascript" src = "prueba%201_files/normalmapfilter.js"></script>
+<style type = "text/css"></style>
+<script id = "shader-fs" type = "text/javascript" src="./shader.frag.js"></script>
+
+<script id = "shader-vs" type = "x-shader/x-vertex">
+	attribute vec2 aTextureCoord;
+	varying vec2 vTextureCoord;
+	uniform sampler2D uSampler;
+
+	void main(void){
+		vTextureCoord = aTextureCoord;
+	}
+</script>
+</head>
+<body>
+
+	<script type = "text/javascript" src = "prueba%201_files/webgl.js"></script>
+
+	<div><script type = "text/javascript">WebGLPlanet();</script></div>
+
+</body></html>
