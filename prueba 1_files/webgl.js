@@ -21,6 +21,28 @@ var WebGLPlanet = (function () {
 	var sprite = [];
 	var startTime = window.performance.now();
 
+	var computeMove = false;
+
+	window.addEventListener('mousedown', (event) => {
+		computeMove = true;
+		console.log("mousedown");
+	}, {capture: true});
+
+	window.addEventListener('mouseup', (event) => {
+		computeMove = false;
+		lastEvent = null;
+		console.log("mouseup");
+	}, {capture: true});
+
+	window.addEventListener('touchend', (event) => {
+		computeMove = false;
+		lastEvent = null;
+	}, {capture: true});
+
+	window.addEventListener('touchstart', (event) => {
+		computeMove = true;
+	}, {capture: true});
+
 	function loadImage (url, callback) {
 		var imageLoader = new PIXI.ImageLoader(url, true);
 		imageLoader.addEventListener("loaded", callback);
@@ -64,11 +86,13 @@ var WebGLPlanet = (function () {
 		stage.addChild(createPlanet(earthColor, cloud, earthSpec, earthNormal, ligth, 1000, 100, 20));
 		
 		stage.interactionManager.onTouchMove = function (event) {
-			computeTouch(event);
+			console.log("touch move!");
+			if(computeMove) computeTouch(event);
 		};
 
 		stage.interactionManager.onMouseMove = function (event) {
-			computeMouse(event);
+			console.log("mouse move!");
+			if(computeMove) computeMouse(event);
 		};
 
 		requestAnimFrame(animate);
@@ -105,18 +129,20 @@ var WebGLPlanet = (function () {
 	var lastEvent = null;
 
 	function computeMouse (event) {
-		if(event !== lastEvent){
-			lastEvent = event;
+		if(lastEvent && event !== lastEvent){
+			let movement = {x: event.pageX - lastEvent.pageX, y: event.pageY - lastEvent.pageY};
 
 			for (var i = sprite.length - 1; i >= 0; i--) {
 
-				var coord = relativeCoords({x: event.pageX, y: event.pageY}, sprite[i]);
+				//var coord = relativeCoords({x: event.pageX, y: event.pageY}, sprite[i]);
 
-				filter[i].uniforms.lightPositionX.value = coord.x;
-				filter[i].uniforms.lightPositionY.value = coord.y;
+				filter[i].uniforms.lightPositionX.value += movement.x / 7;
+				filter[i].uniforms.lightPositionY.value += movement.y / 7;
 			}
 
 		}
+		
+		lastEvent = event;
 	}
 
 	function computeTouch (event) {

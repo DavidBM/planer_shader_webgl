@@ -325,11 +325,11 @@ void main(void) {
 
 	vec3 sphereVector = vec3(screenPlanetXY.x, screenPlanetXY.y, verticalCoordZ);
 
-	vec3 rotated = rotate_vertex_position(sphereVector, vec3(1.0, 0.0, 0.0), -3000.0 * desplazamiento);
-
+	vec3 rotated = rotate_vertex_position(sphereVector, vec3(1.0, 0.0, 0.0), -lightPositionY);
+	rotated = rotate_vertex_position(rotated, vec3(0.0, 1.0, 0.0), -lightPositionX);
 	vec2 latlong = vector3toLonLatNormalized(rotated);
 
-	vec2 finalPointWithDisplacement = vec2(latlong.x + desplazamiento*12.0 , latlong.y);
+	vec2 finalPointWithDisplacement = vec2(latlong.x , latlong.y);
 
 	gl_FragColor.rgba = texture2D( planetTexture, finalPointWithDisplacement);
 
