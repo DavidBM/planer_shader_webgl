@@ -166,6 +166,16 @@ float getAlphaBorderBlending(float radius, float blendingEnd, float gradiendWidt
 	return (blendingEnd - radius) / gradiendWidth;
 }
 
+// proposed solution from 
+// http://stackoverflow.com/questions/26070410/robust-atany-x-on-glsl-for-converting-xy-coordinate-to-angle
+// swaps params when |x| <= |y|
+float atan2(in float y, in float x) {
+    if(abs(x) > abs(y)) {
+    	return M_PI/2.0 - atan(x,y);	
+    } else {
+    	atan(y,x);
+    }
+}
 
 vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, float diffussionIntensity, vec4 normalMap, vec4 nightLight) {
 	vec4 fragColor = vec4(0.0, 0.0, 0.0, 0.0);
@@ -206,8 +216,10 @@ vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, 
 
     fragColor.rgb += in_scatter(camPos, dir, e, sun);
 
+    vec3 nightLightCorrected = vec3(nightLight);
+
     if(fragColor.a > 0.0) {
-    	fragColor.rgb = mix(vec3(nightLight), pow(fragColor.rgb, vec3(1./2.2)), smoothstep(-0.1, 0.1, light));
+    	fragColor.rgb = mix(nightLightCorrected, pow(fragColor.rgb, vec3(1./2.2)), smoothstep(-0.1, 0.1, light));
     }
 
     return fragColor;
@@ -242,159 +254,113 @@ vec4 sum_colors_with_alpha(vec4 texture, vec4 newTexture) {
 	return vec4(color, texture.a + newTexture.a);
 }
 
-spherePoint spherize_point (spherePoint coords, float displacement) {
+vec2 spherize_point (vec2 coords, float displacement) {
 
-	coords.point.s -= 0.5;
-	coords.point.t -= 0.5;
+	coords.s -= 0.5;
+	coords.t -= 0.5;
 
-	float modulo = sqrt( coords.point.s * coords.point.s + coords.point.t * coords.point.t );
+	float modulo = sqrt( coords.s * coords.s + coords.t * coords.t );
 
 	float nuevoRadio = 0.5 * asin( modulo / 0.5 );
-	float angulo = atan( coords.point.s, coords.point.t );
+	float angulo = atan( coords.s, coords.t );
 
 	vec2 newPoint;
 
 	newPoint.t = nuevoRadio * cos( angulo ) / 1.5 - 0.5;
 	newPoint.s = nuevoRadio * sin( angulo ) / 1.5 + displacement;
 
-	return spherePoint(nuevoRadio, angulo, newPoint);
+	return newPoint;
 }
 
-phongLigth calculate_phong_ligth_on_sphere (
-	spherePoint coords, 
-	vec3 ligthPosition, 
-	vec3 viewPosition, 
-	float diffuseReflectionFactor, 
-	float ambientReflectionFactor, 
-	float ligthAmbient, 
-	sampler2D diffussionTexture) 
-{
+// Expects a normnalized vector
+// http://www.learningaboutelectronics.com/Articles/Cartesian-rectangular-to-spherical-coordinate-converter-calculator.php
+vec2 vector3toLonLatNormalized( vec3 coords ) {
+	coords = vec3(coords.z, coords.x, coords.y);
 
-	vec3 puntoEsfera = vec3(
-		2.0 * coords.radius * sin( coords.angle ),
-		2.0 * coords.radius * cos( coords.angle ),
-		sin( acos( coords.radius) ) / 2.0
-	);
+	float radius = sqrt(coords.x * coords.x + coords.y * coords.y + coords.z * coords.z);
 
-	vec3 normal = normalize(puntoEsfera - vec3(0, 0, 0));
+	float lat = atan(coords.y / coords.x);
 
-	vec3 relativeLigthDirection = normalize(ligthPosition - puntoEsfera);
+	float lon = acos(coords.z / radius);
 
-	float ligthDiffuse = dot(relativeLigthDirection, normal) * diffuseReflectionFactor;
-
-	vec3 relativeViewPointDirection = normalize(viewPosition - puntoEsfera);
-
-	vec3 reflectionDirection = 2.0 * dot( relativeLigthDirection, normal ) * normal - relativeLigthDirection;
-
-	float ligthReflection = pow(dot( relativeViewPointDirection, reflectionDirection ), 5.0) * ambientReflectionFactor;
-
-	vec4 difTex = texture2D( diffussionTexture, coords.point);
-
-	ligthReflection *= difTex.r;
-
-	ligthReflection = max(0.0, ligthReflection);
-	ligthDiffuse    = min(1.0, ligthDiffuse);
-
-
-	float totalLigth = ligthAmbient + max( 0.0, ligthReflection + ligthDiffuse );
-
-	return phongLigth(totalLigth, ligthDiffuse, ligthReflection, normal, puntoEsfera, relativeLigthDirection);
-}
-
-float atmosphere_alpha_by_angle (vec3 vectA, vec3 vectB, float minimum, float maximum, float multiplier ) {
-	float alpha = 0.0;
-	float angle = dot(vectA, vectB);
-
-	float size = abs(maximum) + abs(minimum);
-	float center = maximum - size / 2.0;
-
-	if(angle > minimum && angle < maximum){
-		if(angle < center)
-			alpha = (angle + size/2.0);
-		else
-			alpha = (-angle + size/2.0);
+	if(coords.x < 0.0) {
+		lat += M_PI;
 	}
 
-	alpha *= multiplier;
-
-	return alpha;
+	return vec2((lat+M_PI/2.0)/M_PI/2.0, lon / M_PI);
 }
 
-vec4 planet_sunset (vec3 ligth, vec3 normal) {
-
-	float alpha = atmosphere_alpha_by_angle(ligth, normal, -0.2, 0.2, 4.0);
-
-	vec4 color = vec4(1, 0.2588, 0, alpha);
-
-	return color;
-
+vec4 quat_from_axis_angle(vec3 axis, float angle) { 
+  vec4 qr;
+  float half_angle = (angle * 0.5) * M_PI / 180.0;
+  qr.x = axis.x * sin(half_angle);
+  qr.y = axis.y * sin(half_angle);
+  qr.z = axis.z * sin(half_angle);
+  qr.w = cos(half_angle);
+  return qr;
 }
 
-vec4 planet_ligths(vec2 point, float ligth) {
-	vec4 ligthTex = texture2D( ligthTexture, point);
-
-	float alpha = max(0.0, ( 0.2 - ligth) * 5.0);
-
-	return vec4(1, 1, 1, ligthTex.a * alpha);
+vec3 rotate_vertex_position(vec3 position, vec3 axis, float angle) { 
+  vec4 q = quat_from_axis_angle(axis, angle);
+  vec3 v = position.xyz;
+  return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);
 }
 
 void main(void) {
 
+	// This marks makes the coordinates from the texture to be in a space inside of the full texture space. 
+	// Meaning, this gives some borders for the texture
 	float texResize = 1.1053;
 
 	float textCoordS = vTextureCoord.s * texResize - (texResize - 1.0) / 2.0;
 	float textCoordT = vTextureCoord.t * texResize - (texResize - 1.0) / 2.0;
 
-	//Spherize points. Codificamos los datos iniciales en un spherePoint
-	spherePoint textureCoords = spherePoint(
-		length( vec2(textCoordS - 0.5, textCoordT - 0.5 ) ), //Radius
-		atan( textCoordS, textCoordT ), //Angle
-		vec2( textCoordS, textCoordT ) //Point
-	);
+	vec2 screenPlanetXY = vec2(textCoordS - 0.5, -textCoordT + 0.5);
 
-	spherePoint spherizedCoord = spherize_point(textureCoords, desplazamiento * 20.0);
+	float radius = length( screenPlanetXY);
+	float halfRadius = length( screenPlanetXY * 2.0 );
+	float angle = atan( screenPlanetXY.x, screenPlanetXY.y );
+	
+	float verticalCoordZ = sin(acos(halfRadius) /*vertical angle*/) / 2.0;
 
-	vec2 widthTexPoint = vec2(spherizedCoord.point.x/2.0, spherizedCoord.point.y);
+	vec3 sphereVector = vec3(screenPlanetXY.x, screenPlanetXY.y, verticalCoordZ);
 
-	/*phongLigth ligthTotal = calculate_phong_ligth_on_sphere(
-		spherizedCoord, //spherePoint
-		vec3(lightPositionX, lightPositionY, lightPositionZ), //luz
-		vec3(0, 0, 5), //vista
-		2.0, //diffuseReflectionFactor
-		3.0, //ambientReflectionFactor
-		0.05, //ligthAmbient
-		difTexture //diffussionTexture
-	);*/
+	vec3 rotated = rotate_vertex_position(sphereVector, vec3(1.0, 0.0, 0.0), -3000.0 * desplazamiento);
 
-	/*vec4 miColor = vec4(0.0, 0.0, 0.0, 1.0);
+	vec2 latlong = vector3toLonLatNormalized(rotated);
 
-	gl_FragColor.rgba = miColor;
+	vec2 finalPointWithDisplacement = vec2(latlong.x + desplazamiento*12.0 , latlong.y);
 
-	gl_FragColor.rgba = texture2D( planetTexture, widthTexPoint );*/
+	gl_FragColor.rgba = texture2D( planetTexture, finalPointWithDisplacement);
 
-	//if(textureCoords.radius > 0.5){ //Si está fuera del rango de la esfera
-		//gl_FragColor.rgba = vec4(0.0, 0.0, 0.0, 0.0);
-	//}
+	//gl_FragColor.rgb = vec3(latlong.x, latlong.x, latlong.x);
 
+	/*if (mod(abs(latlong.x), 0.1) < 0.005 || mod(latlong.y, 0.1) < 0.005) {
+		gl_FragColor.rgb = vec3(latlong.x);
+	} else {
+		gl_FragColor.rgb = vec3(latlong.y);
+	}*/
 
-	//gl_FragColor.rgba = sum_colors_with_alpha(gl_FragColor.rgba, planet_sunset(ligthTotal.normal, ligthTotal.ligthDirection));
+	// vec2 pointInPlane = vec2( textCoordS, textCoordT );
+	
+	// vec2 spherizedPoint = spherize_point(pointInPlane, desplazamiento * 20.0);
 
-	//gl_FragColor.rgba = sum_colors_with_alpha(gl_FragColor.rgba, texture2D( cloudTexture, vec2(spherizedCoord.point.s + desplazamiento / 15.0, spherizedCoord.point.t ) ) );
+	// vec2 widthTexPoint = vec2(spherizedPoint.x/2.0, spherizedPoint.y);
 
-	//gl_FragColor.rgba = sum_colors_with_alpha(gl_FragColor.rgba, planet_ligths(spherizedCoord.point, ligthTotal.diffussion));
-
-	//gl_FragColor.rgba = gl_FragColor.rgba * ligthTotal.intensity;
+	// gl_FragColor.rgba = texture2D( planetTexture, widthTexPoint);
 
 	gl_FragColor.rgba = atmosphere(
 		vec2(vTextureCoord.s, vTextureCoord.t), 
 		desplazamiento * 4000.0, 
 		desplazamiento * 2000.0,
-		textureCoords.radius,
-		texture2D( planetTexture, widthTexPoint ),
-		texture2D( difTexture, widthTexPoint).r,
-		texture2D( normalTexture, widthTexPoint),
-		texture2D( ligthTexture, widthTexPoint)
+		radius,
+		texture2D( planetTexture, finalPointWithDisplacement),
+		texture2D( difTexture, finalPointWithDisplacement).r,
+		texture2D( normalTexture, finalPointWithDisplacement),
+		texture2D( ligthTexture, finalPointWithDisplacement)
 	);
+
+	//gl_FragColor.rgba = texture2D( planetTexture, vTextureCoord);
 
 	//gl_FragColor = sum_colors_with_alpha(vec4(0,0,0,0), gl_FragColor);
 }
