@@ -61,7 +61,7 @@ var WebGLPlanet = (function () {
 		dif.baseTexture._powerOf2 = true;
 		ligth.baseTexture._powerOf2 = true;
 
-		stage.addChild(createPlanet(earthColor, cloud, earthSpec, earthNormal, ligth, 800, 100, 20));
+		stage.addChild(createPlanet(earthColor, cloud, earthSpec, earthNormal, ligth, 1000, 100, 20));
 		
 		stage.interactionManager.onTouchMove = function (event) {
 			computeTouch(event);
