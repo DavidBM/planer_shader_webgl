@@ -136,8 +136,8 @@ var WebGLPlanet = (function () {
 
 				//var coord = relativeCoords({x: event.pageX, y: event.pageY}, sprite[i]);
 
-				filter[i].uniforms.lightPositionX.value += movement.x / 7;
-				filter[i].uniforms.lightPositionY.value += movement.y / 7;
+				filter[i].uniforms.lightPositionX.value += movement.x / 2;
+				filter[i].uniforms.lightPositionY.value += movement.y / 2;
 			}
 
 		}
