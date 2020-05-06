@@ -177,7 +177,7 @@ float atan2(in float y, in float x) {
     }
 }
 
-vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, float diffussionIntensity, vec4 normalMap, vec4 nightLight) {
+vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, float diffussionIntensity, vec4 normalMap, vec4 nightLight, vec4 clouds) {
 	vec4 fragColor = vec4(0.0, 0.0, 0.0, 0.0);
 	vec3 normalMapDir = vec3(normalMap);
     vec2 p = (2. * fragCoord.xy - vec2(1.0, 1.0)) / 1.0;
@@ -209,18 +209,16 @@ vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, 
         fragColor.rgb = mix(vec3(nightLight), day * light, smoothstep(-0.1, 0.1, light));
     }
 
-    float alpha = getAlphaBorderBlending(radius, 0.5, getPixelWidth() * 2.0);
+    fragColor.rgb = pow(fragColor.rgb, vec3(1./2.2));
+
+    float alpha = getAlphaBorderBlending(radius, 0.5, getPixelWidth());
 
     fragColor.a = alpha;
     fragColor.rgb *= alpha;
 
     fragColor.rgb += in_scatter(camPos, dir, e, sun);
 
-    vec3 nightLightCorrected = vec3(nightLight);
-
-    if(fragColor.a > 0.0) {
-    	fragColor.rgb = mix(nightLightCorrected, pow(fragColor.rgb, vec3(1./2.2)), smoothstep(-0.1, 0.1, light));
-    }
+    fragColor.rgb = mix(vec3(nightLight), fragColor.rgb, smoothstep(-0.1, 0.1, light));
 
     return fragColor;
 }
@@ -357,7 +355,8 @@ void main(void) {
 		texture2D( planetTexture, finalPointWithDisplacement),
 		texture2D( difTexture, finalPointWithDisplacement).r,
 		texture2D( normalTexture, finalPointWithDisplacement),
-		texture2D( ligthTexture, finalPointWithDisplacement)
+		texture2D( ligthTexture, finalPointWithDisplacement),
+		texture2D( cloudTexture, finalPointWithDisplacement)
 	);
 
 	//gl_FragColor.rgba = texture2D( planetTexture, vTextureCoord);
