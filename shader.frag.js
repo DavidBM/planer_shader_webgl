@@ -209,16 +209,17 @@ vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, 
         fragColor.rgb = mix(vec3(nightLight), day * light, smoothstep(-0.1, 0.1, light));
     }
 
-    fragColor.rgb = pow(fragColor.rgb, vec3(1./2.2));
-
     float alpha = getAlphaBorderBlending(radius, 0.5, getPixelWidth());
 
-    fragColor.a = alpha;
     fragColor.rgb *= alpha;
+    fragColor.a = alpha;
+
+    fragColor.rgb = mix(vec3(nightLight), pow(fragColor.rgb, vec3(1./2.2)), smoothstep(-0.1, 0.1, light));
+
+    fragColor.rgb *= alpha;
+    fragColor.a = alpha;
 
     fragColor.rgb += in_scatter(camPos, dir, e, sun);
-
-    fragColor.rgb = mix(vec3(nightLight), fragColor.rgb, smoothstep(-0.1, 0.1, light));
 
     return fragColor;
 }
