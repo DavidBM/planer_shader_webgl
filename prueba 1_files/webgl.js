@@ -178,6 +178,41 @@ var WebGLPlanet = (function () {
 		return newPos;
 	}
 
+	let last_known_scroll_position = 0;
+	let previous_scroll = 0;
+	let ticking = false;
+
+	function scrollHandler(scroll_pos) {
+		var dif = (last_known_scroll_position - previous_scroll) * 100;
+
+		sprite.forEach((sprite, i) => {
+			sprite.height += dif;
+			sprite.width += dif;
+			sprite.position.x -= dif/2;
+			sprite.position.y -= dif/2;
+			filter[i].uniforms.width.value += dif;
+		});
+
+		previous_scroll = last_known_scroll_position;
+	}
+
+	window.addEventListener('wheel', function(e) {
+	  e.stopPropagation();
+	  e.preventDefault();
+	  last_known_scroll_position += e.deltaY * -0.1;
+
+	  console.log("HOLA scrool", e);
+
+	  if (!ticking) {
+	    window.requestAnimationFrame(function() {
+	      scrollHandler(last_known_scroll_position);
+	      ticking = false;
+	    });
+
+	    ticking = true;
+	  }
+	}, {capture: true});
+
 	return webGLStart;
 })();
 

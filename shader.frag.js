@@ -166,17 +166,6 @@ float getAlphaBorderBlending(float radius, float blendingEnd, float gradiendWidt
 	return (blendingEnd - radius) / gradiendWidth;
 }
 
-// proposed solution from 
-// http://stackoverflow.com/questions/26070410/robust-atany-x-on-glsl-for-converting-xy-coordinate-to-angle
-// swaps params when |x| <= |y|
-float atan2(in float y, in float x) {
-    if(abs(x) > abs(y)) {
-    	return M_PI/2.0 - atan(x,y);	
-    } else {
-    	atan(y,x);
-    }
-}
-
 vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, float diffussionIntensity, vec4 normalMap, vec4 nightLight, vec4 clouds) {
 	vec4 fragColor = vec4(0.0, 0.0, 0.0, 0.0);
 	vec3 normalMapDir = vec3(normalMap);
@@ -222,53 +211,6 @@ vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, 
     fragColor.rgb += in_scatter(camPos, dir, e, sun);
 
     return fragColor;
-}
-
-float ligthDiffuse;
-float lightAlpha;
-
-struct spherePoint{
-	float radius;
-	float angle;
-	vec2 point;
-};
-
-struct phongLigth {
-	float intensity;
-	float diffussion;
-	float reflection;
-	vec3 normal;
-	vec3 point;
-	vec3 ligthDirection;
-};
-
-vec4 sum_colors_with_alpha(vec4 texture, vec4 newTexture) {
-
-	vec3 color;
-
-	color.r = texture.r + newTexture.r * newTexture.a;
-	color.g = texture.g + newTexture.g * newTexture.a;
-	color.b = texture.b + newTexture.b * newTexture.a;
-
-	return vec4(color, texture.a + newTexture.a);
-}
-
-vec2 spherize_point (vec2 coords, float displacement) {
-
-	coords.s -= 0.5;
-	coords.t -= 0.5;
-
-	float modulo = sqrt( coords.s * coords.s + coords.t * coords.t );
-
-	float nuevoRadio = 0.5 * asin( modulo / 0.5 );
-	float angulo = atan( coords.s, coords.t );
-
-	vec2 newPoint;
-
-	newPoint.t = nuevoRadio * cos( angulo ) / 1.5 - 0.5;
-	newPoint.s = nuevoRadio * sin( angulo ) / 1.5 + displacement;
-
-	return newPoint;
 }
 
 // Expects a normnalized vector
@@ -330,24 +272,6 @@ void main(void) {
 
 	vec2 finalPointWithDisplacement = vec2(latlong.x , latlong.y);
 
-	//gl_FragColor.rgba = texture2D( planetTexture, finalPointWithDisplacement);
-
-	//gl_FragColor.rgb = vec3(latlong.x, latlong.x, latlong.x);
-
-	/*if (mod(abs(latlong.x), 0.1) < 0.005 || mod(latlong.y, 0.1) < 0.005) {
-		gl_FragColor.rgb = vec3(latlong.x);
-	} else {
-		gl_FragColor.rgb = vec3(latlong.y);
-	}*/
-
-	// vec2 pointInPlane = vec2( textCoordS, textCoordT );
-	
-	// vec2 spherizedPoint = spherize_point(pointInPlane, desplazamiento * 20.0);
-
-	// vec2 widthTexPoint = vec2(spherizedPoint.x/2.0, spherizedPoint.y);
-
-	// gl_FragColor.rgba = texture2D( planetTexture, widthTexPoint);
-
 	gl_FragColor.rgba = atmosphere(
 		vec2(vTextureCoord.s, vTextureCoord.t), 
 		desplazamiento * 4000.0, 
@@ -359,9 +283,5 @@ void main(void) {
 		texture2D( ligthTexture, finalPointWithDisplacement),
 		texture2D( cloudTexture, finalPointWithDisplacement)
 	);
-
-	//gl_FragColor.rgba = texture2D( planetTexture, vTextureCoord);
-
-	//gl_FragColor = sum_colors_with_alpha(vec4(0,0,0,0), gl_FragColor);
 }
 `;
