@@ -115,8 +115,12 @@ var WebGLPlanet = (function () {
 		return sp
 	}
 
+	var time = 0;
+
 	function animate() {
-		var time = window.performance.now();
+		var new_time = window.performance.now();
+		overlay_fps.innerHTML = "FPS: " + Math.round(1000 / (new_time - time));
+		time = new_time;
 
 		for (var i = filter.length - 1; i >= 0; i--) {
 			desplazamiento = 0.000005 * (time - startTime);
@@ -177,6 +181,7 @@ var WebGLPlanet = (function () {
 	return webGLStart;
 })();
 
+var overlay_fps;
 
 (function () {
     var overlay, lastCount, lastTime, timeoutFun;
@@ -195,6 +200,8 @@ var WebGLPlanet = (function () {
     overlay.style.zIndex = '1000000';
     overlay.innerHTML = 'FPS: -';
     document.body.appendChild(overlay);
+
+    overlay_fps = overlay;
 
     lastCount = window.mozPaintCount;
     lastTime = performance.now();
