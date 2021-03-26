@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <!-- saved from url = (0040)http://www.yovid.es/pixi-test/esferizar/ -->
 <html><head><meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
 <title>prueba 1</title>
-<script type = "text/javascript" src = "prueba%201_files/MultipleCallbacks.js"></script>
-<script type = "text/javascript" src = "prueba%201_files/pixi.js"></script>
-<script type = "text/javascript" src = "prueba%201_files/normalmapfilter.js"></script>
+<script type = "text/javascript" src = "shader_code/MultipleCallbacks.js"></script>
+<script type = "text/javascript" src = "shader_code/pixi6.js"></script> 
+<!-- <script type = "text/javascript" src = "shader_code/normalmapfilter.js"></script> -->
+<script type = "text/javascript" src = "shader_code/shader.js"></script>
 <style type = "text/css"></style>
 <script id = "shader-fs" type = "text/javascript" src="./shader.frag.js"></script>
 
 <script id = "shader-vs" type = "x-shader/x-vertex">
-	attribute vec2 aTextureCoord;
-	varying vec2 vTextureCoord;
-	uniform sampler2D uSampler;
+attribute vec2 aVertexPosition;
 
-	void main(void){
-		vTextureCoord = aTextureCoord;
-	}
+uniform mat3 projectionMatrix;
+
+varying vec2 vTextureCoord;
+
+uniform vec4 inputSize;
+uniform vec4 outputFrame;
+
+vec4 filterVertexPosition( void )
+{
+    vec2 position = aVertexPosition * max(outputFrame.zw, vec2(0.)) + outputFrame.xy;
+
+    return vec4((projectionMatrix * vec3(position, 1.0)).xy, 0.0, 1.0);
+}
+
+vec2 filterTextureCoord( void )
+{
+    return aVertexPosition * (outputFrame.zw * inputSize.zw);
+}
+
+void main(void)
+{
+    gl_Position = filterVertexPosition();
+    vTextureCoord = aVertexPosition;
+}
 </script>
 </head>
 <body>
 
-	<script type = "text/javascript" src = "prueba%201_files/webgl.js"></script>
+	<script type = "text/javascript" src = "shader_code/webgl.js"></script>
 
 	<div><script type = "text/javascript">WebGLPlanet();</script></div>
 

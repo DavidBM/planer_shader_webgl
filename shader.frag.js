@@ -1,5 +1,5 @@
 var FRAGMENT_SHADER = `
-precision mediump float;
+precision highp float;
 
 #define M_PI 3.1415926535897932384626433832795
 
@@ -8,6 +8,7 @@ uniform sampler2D planetTexture;
 uniform sampler2D difTexture;
 uniform sampler2D ligthTexture;
 uniform sampler2D normalTexture;
+uniform sampler2D uSampler;
 uniform float desplazamiento;
 uniform float lightPositionX;
 uniform float lightPositionY;
@@ -125,7 +126,7 @@ vec3 in_scatter( vec3 o, vec3 dir, vec2 e, vec3 l ) {
         vec2 e = ray_vs_sphere( v, l, R_INNER );
         e.x = max( e.x, 0.0 );
         if ( e.x < e.y ) {
-        	v += s;
+            v += s;
             continue;
         }
 #endif
@@ -140,7 +141,7 @@ vec3 in_scatter( vec3 o, vec3 dir, vec2 e, vec3 l ) {
         
         sum_ray += d_ray * att;
         sum_mie += d_mie * att;
-		v += s;
+        v += s;
     }
     
     float c  = dot( dir, -l );
@@ -154,21 +155,21 @@ vec3 in_scatter( vec3 o, vec3 dir, vec2 e, vec3 l ) {
 }
 
 float getPixelWidth() {
-	return 1.0 / width;
+    return 1.0 / width;
 }
 
 float getAlphaBorderBlending(float radius, float blendingEnd, float gradiendWidth) {
-	float blendingStart = blendingEnd - gradiendWidth;
+    float blendingStart = blendingEnd - gradiendWidth;
 
-	if(radius <= blendingStart) return 1.0;
-	if(radius >= blendingEnd) return 0.0;
+    if(radius <= blendingStart) return 1.0;
+    if(radius >= blendingEnd) return 0.0;
 
-	return (blendingEnd - radius) / gradiendWidth;
+    return (blendingEnd - radius) / gradiendWidth;
 }
 
 vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, float diffussionIntensity, vec4 normalMap, vec4 nightLight, vec4 clouds) {
-	vec4 fragColor = vec4(0.0, 0.0, 0.0, 0.0);
-	vec3 normalMapDir = vec3(normalMap);
+    vec4 fragColor = vec4(0.0, 0.0, 0.0, 0.0);
+    vec3 normalMapDir = vec3(normalMap);
     vec2 p = (2. * fragCoord.xy - vec2(1.0, 1.0)) / 1.0;
 
     vec3 camPos = vec3(0.0, 0.0, 10.0);
@@ -193,7 +194,7 @@ vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, 
         light = dot(normalize(q - normalMapDir * 0.05), sun);
         float specular = pow(clamp(dot(normalize(sun - dir - normalMapDir * 0.05), q), 0., 1.), 64.);
 
-       	vec3 day = vec3(color) + 0.25 * specular * vec3(0.87, 0.75, 0.) * diffussionIntensity;
+        vec3 day = vec3(color) + 0.25 * specular * vec3(0.87, 0.75, 0.) * diffussionIntensity;
 
         fragColor.rgb = mix(vec3(nightLight), day * light, smoothstep(-0.1, 0.1, light));
     }
@@ -216,19 +217,19 @@ vec4 atmosphere(vec2 fragCoord, float lat, float lon, float radius, vec4 color, 
 // Expects a normnalized vector
 // http://www.learningaboutelectronics.com/Articles/Cartesian-rectangular-to-spherical-coordinate-converter-calculator.php
 vec2 vector3toLonLatNormalized( vec3 coords ) {
-	coords = vec3(coords.z, coords.x, coords.y);
+    coords = vec3(coords.z, coords.x, coords.y);
 
-	float radius = sqrt(coords.x * coords.x + coords.y * coords.y + coords.z * coords.z);
+    float radius = sqrt(coords.x * coords.x + coords.y * coords.y + coords.z * coords.z);
 
-	float lat = atan(coords.y / coords.x);
+    float lat = atan(coords.y / coords.x);
 
-	float lon = acos(coords.z / radius);
+    float lon = acos(coords.z / radius);
 
-	if(coords.x < 0.0) {
-		lat += M_PI;
-	}
+    if(coords.x < 0.0) {
+        lat += M_PI;
+    }
 
-	return vec2((lat+M_PI/2.0)/M_PI/2.0, lon / M_PI);
+    return vec2((lat+M_PI/2.0)/M_PI/2.0, lon / M_PI);
 }
 
 vec4 quat_from_axis_angle(vec3 axis, float angle) { 
@@ -249,39 +250,42 @@ vec3 rotate_vertex_position(vec3 position, vec3 axis, float angle) {
 
 void main(void) {
 
-	// This marks makes the coordinates from the texture to be in a space inside of the full texture space. 
-	// Meaning, this gives some borders for the texture
-	float texResize = 1.1053;
+    // This marks makes the coordinates from the texture to be in a space inside of the full texture space. 
+    // Meaning, this gives some borders for the texture
+    float texResize = 1.1053;
 
-	float textCoordS = vTextureCoord.s * texResize - (texResize - 1.0) / 2.0;
-	float textCoordT = vTextureCoord.t * texResize - (texResize - 1.0) / 2.0;
+    float textCoordS = vTextureCoord.s * texResize - (texResize - 1.0) / 2.0;
+    float textCoordT = vTextureCoord.t * texResize - (texResize - 1.0) / 2.0;
 
-	vec2 screenPlanetXY = vec2(textCoordS - 0.5, -textCoordT + 0.5);
+    vec2 screenPlanetXY = vec2(textCoordS - 0.5, -textCoordT + 0.5);
 
-	float radius = length( screenPlanetXY);
-	float halfRadius = length( screenPlanetXY * 2.0 );
-	float angle = atan( screenPlanetXY.x, screenPlanetXY.y );
-	
-	float verticalCoordZ = sin(acos(halfRadius) /*vertical angle*/) / 2.0;
+    float radius = length( screenPlanetXY);
+    float halfRadius = length( screenPlanetXY * 2.0 );
+    float angle = atan( screenPlanetXY.x, screenPlanetXY.y );
+    
+    float verticalCoordZ = sin(acos(halfRadius)) / 2.0;
 
-	vec3 sphereVector = vec3(screenPlanetXY.x, screenPlanetXY.y, verticalCoordZ);
+    vec3 sphereVector = vec3(screenPlanetXY.x, screenPlanetXY.y, verticalCoordZ);
 
-	vec3 rotated = rotate_vertex_position(sphereVector, vec3(1.0, 0.0, 0.0), -lightPositionY / 5.0);
-	rotated = rotate_vertex_position(rotated, vec3(0.0, 1.0, 0.0), -lightPositionX / 5.0);
-	vec2 latlong = vector3toLonLatNormalized(rotated);
+    vec3 rotated = rotate_vertex_position(sphereVector, vec3(1.0, 0.0, 0.0), -lightPositionY / 5.0);
+    rotated = rotate_vertex_position(rotated, vec3(0.0, 1.0, 0.0), -lightPositionX / 5.0);
+    vec2 latlong = vector3toLonLatNormalized(rotated);
 
-	vec2 finalPointWithDisplacement = vec2(latlong.x , latlong.y);
+    vec2 finalPointWithDisplacement = vec2(latlong.x , latlong.y);
 
-	gl_FragColor.rgba = atmosphere(
-		vec2(vTextureCoord.s, vTextureCoord.t), 
-		desplazamiento * 4000.0, 
-		desplazamiento * 2000.0,
-		radius,
-		texture2D( planetTexture, finalPointWithDisplacement),
-		texture2D( difTexture, finalPointWithDisplacement).r,
-		texture2D( normalTexture, finalPointWithDisplacement),
-		texture2D( ligthTexture, finalPointWithDisplacement),
-		texture2D( cloudTexture, finalPointWithDisplacement)
-	);
+    gl_FragColor.rgba = atmosphere(
+        vec2(vTextureCoord.s, vTextureCoord.t), 
+        desplazamiento * 4000.0,
+        desplazamiento * 2000.0,
+        radius,
+        texture2D( planetTexture, finalPointWithDisplacement),
+        texture2D( difTexture, finalPointWithDisplacement).r,
+        texture2D( normalTexture, finalPointWithDisplacement),
+        texture2D( ligthTexture, finalPointWithDisplacement),
+        texture2D( cloudTexture, finalPointWithDisplacement)
+    );
+
+    //gl_FragColor.rgba = vec4(vTextureCoord.x, vTextureCoord.y, 0.0, 1.0);
+    //gl_FragColor.rgba = texture2D( ligthTexture, finalPointWithDisplacement);
 }
 `;
